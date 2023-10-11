@@ -15,12 +15,14 @@
     <p id="result"></p>
   </body>
   <script>
-    function mycla() {
-      let distance = document.getElementById("distance").value;
-      let price = document.getElementById("price-fuel").value;
-      let number = document.getElementById("num-per").value;
-      let avg = document.getElementById("avg-veh").value;
+   function mycla() {
+      let distance = Number(document.getElementById("distance").value);
+      let price = Number(document.getElementById("price-fuel").value);
+      let number = Number(document.getElementById("num-per").value);
+      let avg = Number(document.getElementById("avg-veh").value);
+
       let costPerPerson = ((distance / avg) * price) / number;
+      console.log(costPerPerson);
       document.getElementById("result").innerHTML =
         "Each person should pay: " + costPerPerson.toFixed(0);
     }
